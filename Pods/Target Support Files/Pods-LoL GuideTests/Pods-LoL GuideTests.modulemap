@@ -1,0 +1,6 @@
+framework module Pods_LoL_GuideTests {
+  umbrella header "Pods-LoL GuideTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,888 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000DF05968011CE1964D6A2F /* Pods_LoL_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2265510AA0A8BB25FA24260D /* Pods_LoL_GuideTests.framework */; };
+		6142A085ED1445EB31247C14 /* Pods_LoL_Guide_LoL_GuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30801D28D724FB1C1482B227 /* Pods_LoL_Guide_LoL_GuideUITests.framework */; };
+		7916F8F2280AF48A00D6E4C0 /* Routers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F8F1280AF48A00D6E4C0 /* Routers.swift */; };
+		7916F900280F2A7300D6E4C0 /* Champions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F8FF280F2A7300D6E4C0 /* Champions.swift */; };
+		7916F904280F2F1F00D6E4C0 /* ChampionDifficulties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F903280F2F1F00D6E4C0 /* ChampionDifficulties.swift */; };
+		7916F906280F2FE600D6E4C0 /* ChampionsPassive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F905280F2FE600D6E4C0 /* ChampionsPassive.swift */; };
+		7916F90A280F33C300D6E4C0 /* ChampionSkins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F909280F33C300D6E4C0 /* ChampionSkins.swift */; };
+		7916F90C280F33FF00D6E4C0 /* ChampionSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F90B280F33FF00D6E4C0 /* ChampionSpells.swift */; };
+		7916F91028100C7300D6E4C0 /* ChampionRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F90F28100C7300D6E4C0 /* ChampionRoles.swift */; };
+		7916F91228100CD600D6E4C0 /* ResourceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F91128100CD500D6E4C0 /* ResourceTypes.swift */; };
+		7916F91428100D0600D6E4C0 /* ChampionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F91328100D0600D6E4C0 /* ChampionStats.swift */; };
+		7916F91628100F5000D6E4C0 /* ChampionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916F91528100F5000D6E4C0 /* ChampionsData.swift */; };
+		7943BB1D28267B4D0014192A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB1C28267B4D0014192A /* ImageModel.swift */; };
+		7943BB2128291D0C0014192A /* DragonURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB2028291D0C0014192A /* DragonURL.swift */; };
+		7943BB2B282BDEDD0014192A /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB2A282BDEDD0014192A /* Seasons.swift */; };
+		7943BB2D282BE0170014192A /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB2C282BE0170014192A /* Queues.swift */; };
+		7943BB2F282BE08C0014192A /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB2E282BE08C0014192A /* Maps.swift */; };
+		7943BB31282BE7920014192A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB30282BE7920014192A /* Items.swift */; };
+		7943BB33282BE7CC0014192A /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB32282BE7CC0014192A /* Basic.swift */; };
+		7943BB35282BE9480014192A /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7943BB34282BE9480014192A /* ItemData.swift */; };
+		7958A00527E87E3B00DAFD2C /* LoL_GuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958A00427E87E3B00DAFD2C /* LoL_GuideApp.swift */; };
+		7958A00727E87E3B00DAFD2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958A00627E87E3B00DAFD2C /* ContentView.swift */; };
+		7958A00927E87E3E00DAFD2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7958A00827E87E3E00DAFD2C /* Assets.xcassets */; };
+		7958A00C27E87E3E00DAFD2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7958A00B27E87E3E00DAFD2C /* Preview Assets.xcassets */; };
+		7958A01627E87E3E00DAFD2C /* LoL_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958A01527E87E3E00DAFD2C /* LoL_GuideTests.swift */; };
+		7958A02027E87E3E00DAFD2C /* LoL_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958A01F27E87E3E00DAFD2C /* LoL_GuideUITests.swift */; };
+		7958A02227E87E3E00DAFD2C /* LoL_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958A02127E87E3E00DAFD2C /* LoL_GuideUITestsLaunchTests.swift */; };
+		797B30F4281A880A00E6A261 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B30F3281A880A00E6A261 /* HomeView.swift */; };
+		798B4ABD282D35DC00E8EB4E /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4ABC282D35DC00E8EB4E /* Languages.swift */; };
+		798B4AC0282E60AE00E8EB4E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4ABF282E60AE00E8EB4E /* NetworkService.swift */; };
+		798B4AC3282E68A800E8EB4E /* ChampionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4AC2282E68A800E8EB4E /* ChampionViewModel.swift */; };
+		798B4AC62831189D00E8EB4E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4AC52831189D00E8EB4E /* Colors.swift */; };
+		798B4AC82832569A00E8EB4E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4AC72832569A00E8EB4E /* ButtonView.swift */; };
+		798B4ACA283264D400E8EB4E /* ChampionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4AC9283264D400E8EB4E /* ChampionsView.swift */; };
+		798B4ACC2832BDB900E8EB4E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4ACB2832BDB900E8EB4E /* ProfileView.swift */; };
+		798B4ACE2832BE2200E8EB4E /* GameHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4ACD2832BE2200E8EB4E /* GameHistoryView.swift */; };
+		798B4AD02832BE6600E8EB4E /* ChampionDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B4ACF2832BE6600E8EB4E /* ChampionDetailPageView.swift */; };
+		79BD51052816AEC3005C419A /* DataDragonServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD51042816AEC3005C419A /* DataDragonServices.swift */; };
+		79BD51192817ED57005C419A /* RiotAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD51182817ED57005C419A /* RiotAPIKey.swift */; };
+		85B2E32B603DCDBBBEB65FE8 /* Pods_LoL_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F064112C1B5F6211FFA1FD4 /* Pods_LoL_Guide.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7958A01227E87E3E00DAFD2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79589FF927E87E3B00DAFD2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7958A00027E87E3B00DAFD2C;
+			remoteInfo = "LoL Guide";
+		};
+		7958A01C27E87E3E00DAFD2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79589FF927E87E3B00DAFD2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7958A00027E87E3B00DAFD2C;
+			remoteInfo = "LoL Guide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2265510AA0A8BB25FA24260D /* Pods_LoL_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoL_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30801D28D724FB1C1482B227 /* Pods_LoL_Guide_LoL_GuideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoL_Guide_LoL_GuideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F064112C1B5F6211FFA1FD4 /* Pods_LoL_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoL_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB35804C560B650907761BD /* Pods-LoL GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL GuideTests.release.xcconfig"; path = "Target Support Files/Pods-LoL GuideTests/Pods-LoL GuideTests.release.xcconfig"; sourceTree = "<group>"; };
+		57EB3B11486C9E20787E8FEC /* Pods-LoL Guide-LoL GuideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL Guide-LoL GuideUITests.debug.xcconfig"; path = "Target Support Files/Pods-LoL Guide-LoL GuideUITests/Pods-LoL Guide-LoL GuideUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7916F8F1280AF48A00D6E4C0 /* Routers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routers.swift; sourceTree = "<group>"; };
+		7916F8FF280F2A7300D6E4C0 /* Champions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champions.swift; sourceTree = "<group>"; };
+		7916F903280F2F1F00D6E4C0 /* ChampionDifficulties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDifficulties.swift; sourceTree = "<group>"; };
+		7916F905280F2FE600D6E4C0 /* ChampionsPassive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsPassive.swift; sourceTree = "<group>"; };
+		7916F909280F33C300D6E4C0 /* ChampionSkins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSkins.swift; sourceTree = "<group>"; };
+		7916F90B280F33FF00D6E4C0 /* ChampionSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionSpells.swift; sourceTree = "<group>"; };
+		7916F90F28100C7300D6E4C0 /* ChampionRoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionRoles.swift; sourceTree = "<group>"; };
+		7916F91128100CD500D6E4C0 /* ResourceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceTypes.swift; sourceTree = "<group>"; };
+		7916F91328100D0600D6E4C0 /* ChampionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionStats.swift; sourceTree = "<group>"; };
+		7916F91528100F5000D6E4C0 /* ChampionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsData.swift; sourceTree = "<group>"; };
+		7943BB1C28267B4D0014192A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		7943BB2028291D0C0014192A /* DragonURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonURL.swift; sourceTree = "<group>"; };
+		7943BB2A282BDEDD0014192A /* Seasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
+		7943BB2C282BE0170014192A /* Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
+		7943BB2E282BE08C0014192A /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		7943BB30282BE7920014192A /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		7943BB32282BE7CC0014192A /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		7943BB34282BE9480014192A /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
+		7958A00127E87E3B00DAFD2C /* LoL Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoL Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7958A00427E87E3B00DAFD2C /* LoL_GuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoL_GuideApp.swift; sourceTree = "<group>"; };
+		7958A00627E87E3B00DAFD2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7958A00827E87E3E00DAFD2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7958A00B27E87E3E00DAFD2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7958A01127E87E3E00DAFD2C /* LoL GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoL GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7958A01527E87E3E00DAFD2C /* LoL_GuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoL_GuideTests.swift; sourceTree = "<group>"; };
+		7958A01B27E87E3E00DAFD2C /* LoL GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoL GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7958A01F27E87E3E00DAFD2C /* LoL_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoL_GuideUITests.swift; sourceTree = "<group>"; };
+		7958A02127E87E3E00DAFD2C /* LoL_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoL_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		797B30F3281A880A00E6A261 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		798B4ABC282D35DC00E8EB4E /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		798B4ABF282E60AE00E8EB4E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		798B4AC2282E68A800E8EB4E /* ChampionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionViewModel.swift; sourceTree = "<group>"; };
+		798B4AC52831189D00E8EB4E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		798B4AC72832569A00E8EB4E /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		798B4AC9283264D400E8EB4E /* ChampionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsView.swift; sourceTree = "<group>"; };
+		798B4ACB2832BDB900E8EB4E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		798B4ACD2832BE2200E8EB4E /* GameHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistoryView.swift; sourceTree = "<group>"; };
+		798B4ACF2832BE6600E8EB4E /* ChampionDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailPageView.swift; sourceTree = "<group>"; };
+		798B4AD12833CAFE00E8EB4E /* LoL-Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LoL-Guide-Info.plist"; sourceTree = SOURCE_ROOT; };
+		79BD51042816AEC3005C419A /* DataDragonServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDragonServices.swift; sourceTree = "<group>"; };
+		79BD51182817ED57005C419A /* RiotAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPIKey.swift; sourceTree = "<group>"; };
+		9FAAE6EA913B9A639E658919 /* Pods-LoL Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL Guide.release.xcconfig"; path = "Target Support Files/Pods-LoL Guide/Pods-LoL Guide.release.xcconfig"; sourceTree = "<group>"; };
+		A14686369A71872ACAFE045F /* Pods-LoL Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL Guide.debug.xcconfig"; path = "Target Support Files/Pods-LoL Guide/Pods-LoL Guide.debug.xcconfig"; sourceTree = "<group>"; };
+		AC8468BFD92C46D61C9DA92F /* Pods-LoL GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL GuideTests.debug.xcconfig"; path = "Target Support Files/Pods-LoL GuideTests/Pods-LoL GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7E95C6C33824762EE5B1736 /* Pods-LoL Guide-LoL GuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoL Guide-LoL GuideUITests.release.xcconfig"; path = "Target Support Files/Pods-LoL Guide-LoL GuideUITests/Pods-LoL Guide-LoL GuideUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79589FFE27E87E3B00DAFD2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85B2E32B603DCDBBBEB65FE8 /* Pods_LoL_Guide.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A00E27E87E3E00DAFD2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000DF05968011CE1964D6A2F /* Pods_LoL_GuideTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A01827E87E3E00DAFD2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6142A085ED1445EB31247C14 /* Pods_LoL_Guide_LoL_GuideUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7916F8F0280AB68800D6E4C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				798B4ABE282E32C900E8EB4E /* DataDragonModels */,
+				7916F8F1280AF48A00D6E4C0 /* Routers.swift */,
+				7943BB1C28267B4D0014192A /* ImageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		79589FF827E87E3B00DAFD2C = {
+			isa = PBXGroup;
+			children = (
+				7958A00327E87E3B00DAFD2C /* LoL Guide */,
+				7958A01427E87E3E00DAFD2C /* LoL GuideTests */,
+				7958A01E27E87E3E00DAFD2C /* LoL GuideUITests */,
+				7958A00227E87E3B00DAFD2C /* Products */,
+				A6A1124521A2D022CCEE7925 /* Pods */,
+				B2681916D27E9B6C1D95B9C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7958A00227E87E3B00DAFD2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7958A00127E87E3B00DAFD2C /* LoL Guide.app */,
+				7958A01127E87E3E00DAFD2C /* LoL GuideTests.xctest */,
+				7958A01B27E87E3E00DAFD2C /* LoL GuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7958A00327E87E3B00DAFD2C /* LoL Guide */ = {
+			isa = PBXGroup;
+			children = (
+				798B4AD12833CAFE00E8EB4E /* LoL-Guide-Info.plist */,
+				7958A00427E87E3B00DAFD2C /* LoL_GuideApp.swift */,
+				798B4AC42831188300E8EB4E /* Components */,
+				798B4AC1282E64C500E8EB4E /* ViewModels */,
+				797B30F2281A87F700E6A261 /* Views */,
+				7916F8F0280AB68800D6E4C0 /* Models */,
+				7958A02E27E87E5A00DAFD2C /* Web Services */,
+				7958A00627E87E3B00DAFD2C /* ContentView.swift */,
+				7958A00827E87E3E00DAFD2C /* Assets.xcassets */,
+				7958A00A27E87E3E00DAFD2C /* Preview Content */,
+			);
+			path = "LoL Guide";
+			sourceTree = "<group>";
+		};
+		7958A00A27E87E3E00DAFD2C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7958A00B27E87E3E00DAFD2C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7958A01427E87E3E00DAFD2C /* LoL GuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				7958A01527E87E3E00DAFD2C /* LoL_GuideTests.swift */,
+			);
+			path = "LoL GuideTests";
+			sourceTree = "<group>";
+		};
+		7958A01E27E87E3E00DAFD2C /* LoL GuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7958A01F27E87E3E00DAFD2C /* LoL_GuideUITests.swift */,
+				7958A02127E87E3E00DAFD2C /* LoL_GuideUITestsLaunchTests.swift */,
+			);
+			path = "LoL GuideUITests";
+			sourceTree = "<group>";
+		};
+		7958A02E27E87E5A00DAFD2C /* Web Services */ = {
+			isa = PBXGroup;
+			children = (
+				79BD5123281946CC005C419A /* Utils */,
+				79BD51042816AEC3005C419A /* DataDragonServices.swift */,
+			);
+			path = "Web Services";
+			sourceTree = "<group>";
+		};
+		797B30F2281A87F700E6A261 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				797B30F3281A880A00E6A261 /* HomeView.swift */,
+				798B4AC9283264D400E8EB4E /* ChampionsView.swift */,
+				798B4ACB2832BDB900E8EB4E /* ProfileView.swift */,
+				798B4ACD2832BE2200E8EB4E /* GameHistoryView.swift */,
+				798B4ACF2832BE6600E8EB4E /* ChampionDetailPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		798B4ABE282E32C900E8EB4E /* DataDragonModels */ = {
+			isa = PBXGroup;
+			children = (
+				7916F8FF280F2A7300D6E4C0 /* Champions.swift */,
+				7916F91528100F5000D6E4C0 /* ChampionsData.swift */,
+				7916F903280F2F1F00D6E4C0 /* ChampionDifficulties.swift */,
+				7916F905280F2FE600D6E4C0 /* ChampionsPassive.swift */,
+				7916F909280F33C300D6E4C0 /* ChampionSkins.swift */,
+				7916F90B280F33FF00D6E4C0 /* ChampionSpells.swift */,
+				7916F90F28100C7300D6E4C0 /* ChampionRoles.swift */,
+				7916F91328100D0600D6E4C0 /* ChampionStats.swift */,
+				7916F91128100CD500D6E4C0 /* ResourceTypes.swift */,
+				7943BB2A282BDEDD0014192A /* Seasons.swift */,
+				7943BB2C282BE0170014192A /* Queues.swift */,
+				7943BB2E282BE08C0014192A /* Maps.swift */,
+				7943BB30282BE7920014192A /* Items.swift */,
+				7943BB32282BE7CC0014192A /* Basic.swift */,
+				7943BB34282BE9480014192A /* ItemData.swift */,
+				798B4ABC282D35DC00E8EB4E /* Languages.swift */,
+			);
+			path = DataDragonModels;
+			sourceTree = "<group>";
+		};
+		798B4AC1282E64C500E8EB4E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				798B4AC2282E68A800E8EB4E /* ChampionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		798B4AC42831188300E8EB4E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				798B4AC52831189D00E8EB4E /* Colors.swift */,
+				798B4AC72832569A00E8EB4E /* ButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		79BD5123281946CC005C419A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79BD51182817ED57005C419A /* RiotAPIKey.swift */,
+				7943BB2028291D0C0014192A /* DragonURL.swift */,
+				798B4ABF282E60AE00E8EB4E /* NetworkService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A6A1124521A2D022CCEE7925 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A14686369A71872ACAFE045F /* Pods-LoL Guide.debug.xcconfig */,
+				9FAAE6EA913B9A639E658919 /* Pods-LoL Guide.release.xcconfig */,
+				57EB3B11486C9E20787E8FEC /* Pods-LoL Guide-LoL GuideUITests.debug.xcconfig */,
+				F7E95C6C33824762EE5B1736 /* Pods-LoL Guide-LoL GuideUITests.release.xcconfig */,
+				AC8468BFD92C46D61C9DA92F /* Pods-LoL GuideTests.debug.xcconfig */,
+				4BB35804C560B650907761BD /* Pods-LoL GuideTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2681916D27E9B6C1D95B9C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F064112C1B5F6211FFA1FD4 /* Pods_LoL_Guide.framework */,
+				30801D28D724FB1C1482B227 /* Pods_LoL_Guide_LoL_GuideUITests.framework */,
+				2265510AA0A8BB25FA24260D /* Pods_LoL_GuideTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7958A00027E87E3B00DAFD2C /* LoL Guide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7958A02527E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL Guide" */;
+			buildPhases = (
+				D4A2EC73821535E056033FC0 /* [CP] Check Pods Manifest.lock */,
+				79589FFD27E87E3B00DAFD2C /* Sources */,
+				79589FFE27E87E3B00DAFD2C /* Frameworks */,
+				79589FFF27E87E3B00DAFD2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoL Guide";
+			productName = "LoL Guide";
+			productReference = 7958A00127E87E3B00DAFD2C /* LoL Guide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7958A01027E87E3E00DAFD2C /* LoL GuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7958A02827E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL GuideTests" */;
+			buildPhases = (
+				FD1523FEE4234737C173B446 /* [CP] Check Pods Manifest.lock */,
+				7958A00D27E87E3E00DAFD2C /* Sources */,
+				7958A00E27E87E3E00DAFD2C /* Frameworks */,
+				7958A00F27E87E3E00DAFD2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7958A01327E87E3E00DAFD2C /* PBXTargetDependency */,
+			);
+			name = "LoL GuideTests";
+			productName = "LoL GuideTests";
+			productReference = 7958A01127E87E3E00DAFD2C /* LoL GuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7958A01A27E87E3E00DAFD2C /* LoL GuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7958A02B27E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL GuideUITests" */;
+			buildPhases = (
+				399DBF0E285D27F26A820318 /* [CP] Check Pods Manifest.lock */,
+				7958A01727E87E3E00DAFD2C /* Sources */,
+				7958A01827E87E3E00DAFD2C /* Frameworks */,
+				7958A01927E87E3E00DAFD2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7958A01D27E87E3E00DAFD2C /* PBXTargetDependency */,
+			);
+			name = "LoL GuideUITests";
+			productName = "LoL GuideUITests";
+			productReference = 7958A01B27E87E3E00DAFD2C /* LoL GuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79589FF927E87E3B00DAFD2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					7958A00027E87E3B00DAFD2C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					7958A01027E87E3E00DAFD2C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7958A00027E87E3B00DAFD2C;
+					};
+					7958A01A27E87E3E00DAFD2C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 7958A00027E87E3B00DAFD2C;
+					};
+				};
+			};
+			buildConfigurationList = 79589FFC27E87E3B00DAFD2C /* Build configuration list for PBXProject "LoL Guide" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79589FF827E87E3B00DAFD2C;
+			productRefGroup = 7958A00227E87E3B00DAFD2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7958A00027E87E3B00DAFD2C /* LoL Guide */,
+				7958A01027E87E3E00DAFD2C /* LoL GuideTests */,
+				7958A01A27E87E3E00DAFD2C /* LoL GuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79589FFF27E87E3B00DAFD2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7958A00C27E87E3E00DAFD2C /* Preview Assets.xcassets in Resources */,
+				7958A00927E87E3E00DAFD2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A00F27E87E3E00DAFD2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A01927E87E3E00DAFD2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		399DBF0E285D27F26A820318 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoL Guide-LoL GuideUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4A2EC73821535E056033FC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoL Guide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1523FEE4234737C173B446 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoL GuideTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79589FFD27E87E3B00DAFD2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7916F90C280F33FF00D6E4C0 /* ChampionSpells.swift in Sources */,
+				7943BB2F282BE08C0014192A /* Maps.swift in Sources */,
+				798B4AC82832569A00E8EB4E /* ButtonView.swift in Sources */,
+				7943BB2D282BE0170014192A /* Queues.swift in Sources */,
+				7943BB35282BE9480014192A /* ItemData.swift in Sources */,
+				7943BB31282BE7920014192A /* Items.swift in Sources */,
+				798B4ACE2832BE2200E8EB4E /* GameHistoryView.swift in Sources */,
+				798B4AC0282E60AE00E8EB4E /* NetworkService.swift in Sources */,
+				79BD51052816AEC3005C419A /* DataDragonServices.swift in Sources */,
+				7916F906280F2FE600D6E4C0 /* ChampionsPassive.swift in Sources */,
+				7916F91628100F5000D6E4C0 /* ChampionsData.swift in Sources */,
+				7916F91028100C7300D6E4C0 /* ChampionRoles.swift in Sources */,
+				798B4AC62831189D00E8EB4E /* Colors.swift in Sources */,
+				7916F904280F2F1F00D6E4C0 /* ChampionDifficulties.swift in Sources */,
+				7958A00727E87E3B00DAFD2C /* ContentView.swift in Sources */,
+				797B30F4281A880A00E6A261 /* HomeView.swift in Sources */,
+				7916F900280F2A7300D6E4C0 /* Champions.swift in Sources */,
+				798B4AD02832BE6600E8EB4E /* ChampionDetailPageView.swift in Sources */,
+				7943BB2B282BDEDD0014192A /* Seasons.swift in Sources */,
+				7943BB33282BE7CC0014192A /* Basic.swift in Sources */,
+				7916F91428100D0600D6E4C0 /* ChampionStats.swift in Sources */,
+				7916F91228100CD600D6E4C0 /* ResourceTypes.swift in Sources */,
+				798B4ABD282D35DC00E8EB4E /* Languages.swift in Sources */,
+				7916F8F2280AF48A00D6E4C0 /* Routers.swift in Sources */,
+				798B4ACC2832BDB900E8EB4E /* ProfileView.swift in Sources */,
+				798B4ACA283264D400E8EB4E /* ChampionsView.swift in Sources */,
+				7958A00527E87E3B00DAFD2C /* LoL_GuideApp.swift in Sources */,
+				798B4AC3282E68A800E8EB4E /* ChampionViewModel.swift in Sources */,
+				79BD51192817ED57005C419A /* RiotAPIKey.swift in Sources */,
+				7943BB2128291D0C0014192A /* DragonURL.swift in Sources */,
+				7916F90A280F33C300D6E4C0 /* ChampionSkins.swift in Sources */,
+				7943BB1D28267B4D0014192A /* ImageModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A00D27E87E3E00DAFD2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7958A01627E87E3E00DAFD2C /* LoL_GuideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7958A01727E87E3E00DAFD2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7958A02027E87E3E00DAFD2C /* LoL_GuideUITests.swift in Sources */,
+				7958A02227E87E3E00DAFD2C /* LoL_GuideUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7958A01327E87E3E00DAFD2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7958A00027E87E3B00DAFD2C /* LoL Guide */;
+			targetProxy = 7958A01227E87E3E00DAFD2C /* PBXContainerItemProxy */;
+		};
+		7958A01D27E87E3E00DAFD2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7958A00027E87E3B00DAFD2C /* LoL Guide */;
+			targetProxy = 7958A01C27E87E3E00DAFD2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7958A02327E87E3E00DAFD2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7958A02427E87E3E00DAFD2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7958A02627E87E3E00DAFD2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A14686369A71872ACAFE045F /* Pods-LoL Guide.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LoL Guide/Preview Content\"";
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LoL-Guide-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7958A02727E87E3E00DAFD2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAAE6EA913B9A639E658919 /* Pods-LoL Guide.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LoL Guide/Preview Content\"";
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LoL-Guide-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7958A02927E87E3E00DAFD2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC8468BFD92C46D61C9DA92F /* Pods-LoL GuideTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoL Guide.app/LoL Guide";
+			};
+			name = Debug;
+		};
+		7958A02A27E87E3E00DAFD2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB35804C560B650907761BD /* Pods-LoL GuideTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-GuideTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoL Guide.app/LoL Guide";
+			};
+			name = Release;
+		};
+		7958A02C27E87E3E00DAFD2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57EB3B11486C9E20787E8FEC /* Pods-LoL Guide-LoL GuideUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LoL Guide";
+			};
+			name = Debug;
+		};
+		7958A02D27E87E3E00DAFD2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E95C6C33824762EE5B1736 /* Pods-LoL Guide-LoL GuideUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GNQWK8QV65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batuhanmicik.LoL-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LoL Guide";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79589FFC27E87E3B00DAFD2C /* Build configuration list for PBXProject "LoL Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7958A02327E87E3E00DAFD2C /* Debug */,
+				7958A02427E87E3E00DAFD2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7958A02527E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7958A02627E87E3E00DAFD2C /* Debug */,
+				7958A02727E87E3E00DAFD2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7958A02827E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL GuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7958A02927E87E3E00DAFD2C /* Debug */,
+				7958A02A27E87E3E00DAFD2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7958A02B27E87E3E00DAFD2C /* Build configuration list for PBXNativeTarget "LoL GuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7958A02C27E87E3E00DAFD2C /* Debug */,
+				7958A02D27E87E3E00DAFD2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79589FF927E87E3B00DAFD2C /* Project object */;
+}

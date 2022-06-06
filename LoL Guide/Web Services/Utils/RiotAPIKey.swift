@@ -7,14 +7,12 @@
 
 import Foundation
 
+ let Riotkey = "RGAPI-aec38a21-3028-4da7-be78-714a7416cb16"
 
-class APIAccess{
-    var name : String
-    init(name:String){
-        self.name = name
-    }
-}
 
-var APIKey = APIAccess(name: "RGAPI-59764303-818b-45a7-8fd0-c55af5991d54")
+
+
+
+
 
 

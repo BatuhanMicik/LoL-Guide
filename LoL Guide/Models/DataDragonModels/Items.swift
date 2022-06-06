@@ -8,8 +8,8 @@
 import Foundation
 
 struct Items: Codable {
-    let type: String
-    let version: String
+//    let type: String
+//    let version: String
     let basic: Basic
     let data: [String: ItemData]
     let groups: [Group]

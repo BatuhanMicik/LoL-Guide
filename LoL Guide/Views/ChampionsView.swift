@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChampionsView: View {
+    let champion : Champions
+    
     var body: some View {
         Image("Aatrox")
             
@@ -24,7 +26,7 @@ struct ChampionsView: View {
 
 struct ChampionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChampionsView()
+        ChampionsView(champion: dev.champion)
             .previewLayout(.sizeThatFits)
             .padding()
             

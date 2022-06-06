@@ -8,7 +8,7 @@
 import Foundation
 //import Alamofire
 
-struct Seasons: Codable {
+struct Seasons: Codable, Identifiable {
     let id: Int
     let season: String
 }

@@ -10,11 +10,20 @@ import SwiftUI
 
 @main
 struct LoL_GuideApp: App {
+   
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                    
-            }
+            MainTabView()
+//         ContentView()
+              
         }
     }
 
+}
+//            NavigationView{
+//            MainTabView()
+//                    .navigationBarHidden(true)
+//             //ContentView()
+//            }
+//            .environmentObject(vm)
+//        }

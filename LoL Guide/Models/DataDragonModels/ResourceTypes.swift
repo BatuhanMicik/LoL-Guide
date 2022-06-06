@@ -22,4 +22,8 @@ enum ResourceTypes: String, Codable{
     case Grit = "Grit"
     case None = "None"
     case Unknown = "Unknown"
+    case NoCost = "No Cost"
+
+    
+    
 }

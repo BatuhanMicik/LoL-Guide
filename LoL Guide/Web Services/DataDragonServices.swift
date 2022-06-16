@@ -147,38 +147,7 @@ class DataDragonService{
                 }
             }.resume()
 }
-    func getFreeRotation(completion: @escaping(FreeChampions?) -> ()) {
-            guard let url = URL(string: "https://tr1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=\(Riotkey)") else {
-                completion(nil)
-                return
-            }
-            
-            var request = URLRequest(url: url)
-            
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            request.httpMethod = "GET"
-            
-            URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {
-                    DispatchQueue.main.async {
-                        completion(nil)
-                    }
-                    return
-                }
-                
-                do {
-                    let freeChampions = try JSONDecoder().decode(FreeChampions.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        completion(freeChampions)
-                    }
-                } catch {
-                    print("ERROR: ", error)
-                }
-            }.resume()
-}
-    
+   
         
 }
 

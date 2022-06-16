@@ -16,7 +16,7 @@ class ProfileService{
          
     
     func getSummonerInfo(name : String ,completion: @escaping(SummonerInfo?) -> ()) {
-            guard let url = URL(string: "https://tr1.api.riotgames.com/lol/summoner/v4/summoners/by-name/Khonshû?api_key=\(Riotkey)") else {
+            guard let url = URL(string: "https://tr1.api.riotgames.com/lol/summoner/v4/summoners/by-name/\(name)?api_key=\(Riotkey)") else {
                 completion(nil)
                 return
             }
@@ -82,7 +82,7 @@ class ProfileService{
     }
 
     func getMatches(matchID: String, completion: @escaping(Match?) -> ()){
-        guard let url = URL(string: "https://europe.api.riotgames.com/lol/match/v5/matches/TR1_1291968656?api_key=\(Riotkey)") else {
+        guard let url = URL(string: "https://europe.api.riotgames.com/lol/match/v5/matches/\(matchID)?api_key=\(Riotkey)") else {
             completion(nil)
             return
         }

@@ -14,7 +14,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection : $selectedTab){
-            HomeViews()
+            HomeViews(searchText: "")
                 .onAppear {
                     self.selectedTab = 0
                 }
@@ -30,14 +30,7 @@ struct MainTabView: View {
                     Image(systemName: "crown.fill")
                     Text("Champions")
                 }.tag(1)
-            SettingsView()
-                .onAppear {
-                    self.selectedTab = 2
-                }
-                .tabItem {
-                    Image(systemName: "gearshape")
-                    Text("Settings")
-                }.tag(2)
+            
         }
     }
 }

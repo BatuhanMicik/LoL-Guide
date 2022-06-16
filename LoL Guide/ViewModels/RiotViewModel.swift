@@ -10,55 +10,47 @@ import SwiftUI
 import Combine
 
 class RiotViewModel: ObservableObject{
-    @Published var searchName : String = ""
-     var matchesArray = [String]()
-    @Published var matchesPreview = [MatchInfo]()
-    @Published var summonerInfos : SummonerInfo?
     
-    init(){
-        getSummonerInfo()
-    }
     
-
-    func getSummonerInfo(){
-        ProfileService().getSummonerInfo(name: searchName) { summoner in
-            self.summonerInfos = summoner.self
+     var matchesPreview = [Match]()
+    @Published var matchInfos = [MatchInfo]()
+    
+    
+    
+    func getSummonerInfo(name : String, completion : @escaping(SummonerInfo?) -> ()){
+        ProfileService().getSummonerInfo(name: name) { summoner in
+            if summoner?.puuid != nil{
+                completion(summoner)
+            }
             
         }
     }
     
-    func getMatchDetails(){
-        ProfileService().getSummonerInfo(name: searchName) { response in
-            let profile = response
-            if let puiid = profile?.puuid{
-                ProfileService().getMatchIDs(puuid: puiid) { matches in
-                    if let validArray = matches, validArray.count > 0 {
-                        self.matchesArray = validArray
-//                            print(matchesArray.count)
-                        self.matchesArray.forEach { matchId in
-//                            ProfileService().getMatches(matchID: self.matchesArray) { matchInfo in
-//                                self.matchesPreview.append(matchInfo ?? MatchInfo)
-//                            }
+    func getMatchDetails(puuid : String, completion : @escaping([MatchInfo]) -> Void){
+        self.matchInfos.removeAll()
+        ProfileService().getMatchIDs(puuid: puuid) { matches in
+            if let validArray = matches, validArray.count > 0 {
+                validArray.forEach { matchId in
+                    ProfileService().getMatches(matchID: matchId) { matchInfo in
+                        if let matchValue = matchInfo {
+                            self.matchInfos.append(matchValue.info)
+                           
                             
+                           
+                        }
+                    }
                 }
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+                
+                completion(self.matchInfos)
+                
+            }
         }
         
     }
-                
-                
-
     
-    
+   
 }
 
-
-        }
-    }
-//    func matchDetailForPlayer(){
-//        self.matchesPreview.forEach { participant in
-//            if
-//        }
-//    }
-    
-    
-}

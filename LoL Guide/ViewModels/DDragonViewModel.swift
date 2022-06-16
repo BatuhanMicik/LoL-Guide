@@ -9,66 +9,33 @@ import Foundation
 import Combine
 import SwiftUI
 
+typealias fetchChampionDataResponse = ([Datum],[String])
+
+
 class DDragonViewModel : ObservableObject{
-        
-   
-    @Published var champList : [String] = []
+    
+    //Champions
+    @Published var champs : [String] = []
     @Published var champName = [Datum]()
     @Published var champions : Datum?
-    @Published var searchResult : [Datum] = []
-    @Published var items : ItemData?
-    @Published var itemKey : Items?
-
-    init(){
-        fetchAllChampions()
-       
-    }
-
-    func fetcItems(){
-        DataDragonService().getItems { items in
-            let itemss = Array(items!.data.keys)
-            
-            for i in itemss.indices{
-                self.items = items!.data[itemss[i]].self
-            }
-            print("")
-        }
-    }
     
-    func fetchAllChampions() {
+    func fetchAllChampions(completion: @escaping(fetchChampionDataResponse)->Void) {
         DataDragonService().getChampions { champions in
             
-            self.champList = Array(champions!.data.keys)
-           
-//            self.champName.forEach { champion in
-//                self.champions = champion.self
-//            }
+            self.champs = Array(champions!.data.keys)
+            self.champName = Array(champions!.data.values).sorted(by: {$0.id < $1.id})
             
-            for i in self.champList.indices{
-                self.champions = champions!.data[self.champList[i]].self
-
-
+            self.champName.forEach { champion in
+                self.champions = champion.self
             }
-//            let x = champions?.data.keys
-//            champList = Array(champions?.data.keys)
-//            let firstchamp = champions?.data[index]
-            print("")
-
-    }
-
-    }
-    
-    func fetchFreeChampions(){
-        DataDragonService().getFreeRotation { champion in
-            for i in champion!.freeChampionIDS{
-                if i == Int(self.champions?.key ?? ""){
-                    
-                }
+            
+            if self.champs.count == self.champName.count, self.champName.first != nil {
+                completion(fetchChampionDataResponse(self.champName, self.champs))
             }
         }
+        
     }
-   
-  
+ 
 }
 
 

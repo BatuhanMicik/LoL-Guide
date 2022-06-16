@@ -6,14 +6,14 @@
 //
 
 import Foundation
-struct Match: Codable {
-    let metadata: Metadata
+struct Match: Codable{
     let info: MatchInfo
+  
 }
 
 // MARK: - Info
-struct MatchInfo: Codable {
-    let gameCreation, gameDuration, gameEndTimestamp, gameID: Int
+struct MatchInfo: Codable, Identifiable{
+    let gameCreation, gameDuration, id: Int
     let gameMode, gameName: String
     let gameStartTimestamp: Int
     let gameType, gameVersion: String
@@ -25,21 +25,22 @@ struct MatchInfo: Codable {
     let tournamentCode: String
 
     enum CodingKeys: String, CodingKey {
-        case gameCreation, gameDuration, gameEndTimestamp
-        case gameID = "gameId"
+        case gameCreation, gameDuration
+        case id = "gameId"
         case gameMode, gameName, gameStartTimestamp, gameType, gameVersion
         case mapID = "mapId"
         case participants
         case platformID = "platformId"
         case queueID = "queueId"
         case teams, tournamentCode
+        
     }
 }
 
 // MARK: - Participant
 struct Participant: Codable {
     let assists, baronKills, bountyLevel: Int
-    let challenges: [String: Double]
+    //let challenges: [String: Double]
     let champExperience, champLevel, championID: Int
     let championName: String
     let championTransform, consumablesPurchased, damageDealtToBuildings, damageDealtToObjectives: Int
@@ -81,7 +82,7 @@ struct Participant: Codable {
     let win: Bool
 
     enum CodingKeys: String, CodingKey {
-        case assists, baronKills, bountyLevel, challenges, champExperience, champLevel
+        case assists, baronKills, bountyLevel, champExperience, champLevel
         case championID = "championId"
         case championName, championTransform, consumablesPurchased, damageDealtToBuildings, damageDealtToObjectives, damageDealtToTurrets, damageSelfMitigated, deaths, detectorWardsPlaced, doubleKills, dragonKills, eligibleForProgression, firstBloodAssist, firstBloodKill, firstTowerAssist, firstTowerKill, gameEndedInEarlySurrender, gameEndedInSurrender, goldEarned, goldSpent, individualPosition, inhibitorKills, inhibitorTakedowns, inhibitorsLost, item0, item1, item2, item3, item4, item5, item6, itemsPurchased, killingSprees, kills, lane, largestCriticalStrike, largestKillingSpree, largestMultiKill, longestTimeSpentLiving, magicDamageDealt, magicDamageDealtToChampions, magicDamageTaken, neutralMinionsKilled, nexusKills, nexusLost, nexusTakedowns, objectivesStolen, objectivesStolenAssists
         case participantID = "participantId"
@@ -169,13 +170,13 @@ struct Baron: Codable {
 }
 
 // MARK: - Metadata
-struct Metadata: Codable {
-    let dataVersion, matchID: String
-    let participants: [String]
-
-    enum CodingKeys: String, CodingKey {
-        case dataVersion
-        case matchID = "matchId"
-        case participants
-    }
-}
+//struct Metadata: Codable {
+//    let dataVersion, matchID: String
+//    let participants: [String]
+//
+//    enum CodingKeys: String, CodingKey {
+//        case dataVersion
+//        case matchID = "matchId"
+//        case participants
+//    }
+//}

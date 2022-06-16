@@ -9,17 +9,39 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileView: View {
+    @State var summonerInfo: SummonerInfo?
+    @State private var games : [MatchInfo]?
+    @State private var champs : Datum?
+//    @State private var gameID : [MatchInfo]?
     @ObservedObject var vm = RiotViewModel()
     var body: some View {
+        
         VStack(alignment: .center){
-            profileStart
-                .frame(height : .infinity)
-            Divider()
-                .padding(.vertical)
             ScrollView{
-                LazyVStack{
-                    
+            profileStart
+          
+                .onAppear(){
+                    vm.getMatchDetails(puuid: summonerInfo?.puuid ?? "") { data in
+                        games = data
+                    }
+                  
+
                 }
+            
+                LazyVStack{
+                    if let matchList = self.games {
+                        ForEach(matchList) { game in
+                            ForEach(game.participants, id:\.puuid){ participant in
+                                    if participant.puuid == summonerInfo?.puuid{
+                                        GameHistoryView(gameModel: participant)
+                                    }
+                                }
+                                
+                    }
+                    
+                    }
+                }
+                
             }
         }
     }
@@ -27,7 +49,7 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(summonerInfo: SummonerInfo(id: "1", accountID: "asdsad", puuid: "asdasdasd", name: "batu", profileIconID: 12, summonerLevel: 55))
     }
    
 }
@@ -35,28 +57,18 @@ extension ProfileView{
     var profileStart : some View{
        
             ZStack(alignment : .bottomLeading){
-                Image("Aatrox_0")
+                KFImage(URL(string: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/\(champs?.id ?? "Aatrox")_0.jpg"))
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
                     .opacity(0.8)
-                    .frame(width: 300, height: 300)
+                    .frame(width: 250, height: 250)
                     
                 VStack {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                            .resizable()
-                            .frame(width: 20, height: 16)
-                            .foregroundColor(Color.white)
-                            .offset(x: -70, y: -60)
-                            
-                    }
-                    
+     
                     HStack {
                         ZStack {
-                            Image("4980")
+                            KFImage(URL(string: "http://ddragon.leagueoflegends.com/cdn/12.10.1/img/profileicon/\(summonerInfo?.profileIconID ?? 1).png"))
                                 .resizable()
                                 .scaledToFill()
                                 .clipShape(Circle())
@@ -64,7 +76,7 @@ extension ProfileView{
                                 .frame(width: 100, height: 100)
                             
                             
-                            Text("\(vm.summonerInfos?.summonerLevel ?? 0)")
+                            Text("\(summonerInfo?.summonerLevel ?? 1)")
                                 
                                 .bold()
                                 .foregroundColor(Color.theme.textColor)
@@ -74,7 +86,7 @@ extension ProfileView{
                         }
                         .offset(x: -20, y: 8)
                         
-                        Text("\(vm.summonerInfos?.name ?? "")")
+                        Text("\(summonerInfo?.name ?? "")")
                             .foregroundColor(Color.white)
                             .bold()
                             .font(.system(size: 25))

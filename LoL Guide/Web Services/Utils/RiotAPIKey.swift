@@ -7,7 +7,7 @@
 
 import Foundation
 
- let Riotkey = "RGAPI-aec38a21-3028-4da7-be78-714a7416cb16"
+ let Riotkey = "Riot Key"
 
 
 
